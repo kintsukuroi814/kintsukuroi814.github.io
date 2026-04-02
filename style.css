@@ -465,6 +465,37 @@ a {
   font-weight: 300;
 }
 
+/* Chapter labels */
+.chapter-label {
+  text-align: center;
+  margin: clamp(var(--space-12), 6vw, var(--space-20)) auto var(--space-8);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  max-width: var(--content-default);
+  padding: 0 var(--space-6);
+}
+
+.chapter-label::before,
+.chapter-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.chapter-label span {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--color-primary);
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 /* Gallery scroll reveal */
 .photo-item {
   opacity: 1;
