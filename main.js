@@ -39,11 +39,8 @@
     const current = window.scrollY;
     if (current > 60) header.classList.add('header--scrolled');
     else header.classList.remove('header--scrolled');
-    if (current > lastScroll && current > 200) header.classList.add('header--hidden');
-    else header.classList.remove('header--hidden');
     lastScroll = Math.max(0, current);
   }, { passive: true });
-
   // ---- MOBILE NAV ----
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobile-nav');
@@ -128,8 +125,8 @@
     { src: BASE + 'Carpe%20diem.jpg', title: 'Carpe Diem' },
     { src: BASE + 'Lucky%20shot.jpg', title: 'Lucky Shot' },
     { src: BASE + 'Phoenix.JPG', title: 'Phoenix' },
-      { src: BASE + 'Ambition.jpeg', title: 'Ambition' },   // XI — Loss & Letting Go
-    { src: BASE + 'Missing%20piece.jpg', title: 'Missing Piece' },
+140
+     { src: BASE + 'Missing%20piece.jpg', title: 'Missing Piece' },
     { src: BASE + 'Let%20go.jpg', title: 'Let Go' },
     { src: BASE + 'Bureaucracy.jpg', title: 'Bureaucracy' },
     { src: BASE + 'Medo.jpg', title: 'Medo' },
@@ -140,8 +137,9 @@
     { src: BASE + 'Timing%20is%20everything.jpg', title: 'Timing Is Everything' },
     { src: BASE + "When%20the%20rich%20wage%20war%20it's%20the%20poor%20who%20die.jpg", title: 'When the Rich Wage War\u2026' },
     { src: BASE + 'Festina%20Lente.JPG', title: 'Festina Lente' },
-         { src: BASE + '  { src: BASE + 'Your%20Path.jpeg', title: 'Your Path' },   { src: BASE + 'Memento%20Mori.jpg', title: 'Memento Mori' },
-  ];
+    { src: BASE + 'Your%20Path.jpeg', title: 'Your Path';
+    { src: BASE + 'Memento%20Mori.jpg', title: 'Memento Mori'
+      ];}
 
   // ---- LIGHTBOX ----
   const lightbox = document.getElementById('lightbox');
