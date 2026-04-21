@@ -224,4 +224,19 @@
     if (Math.abs(diff) > 50) navigate(diff > 0 ? 1 : -1);
   }, { passive: true });
 
+
+  // ---- STORY OVERLAY TOUCH TOGGLE ----
+  document.querySelectorAll('.photo-item--story').forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      if (!window.matchMedia('(hover: none)').matches) return;
+      if (e.target.closest('.photo-wrap img')) return;
+      e.preventDefault();
+      var isActive = item.classList.toggle('is-active');
+      if (isActive) {
+        document.querySelectorAll('.photo-item--story.is-active').forEach(function (other) {
+          if (other !== item) other.classList.remove('is-active');
+        });
+      }
+    });
+  });
 })();
