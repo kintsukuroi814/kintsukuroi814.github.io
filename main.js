@@ -71,7 +71,7 @@
     setTimeout(() => el.classList.add('visible'), 200 + i * 150);
   });
 
-  // ---- ALL 54 PHOTOS ----
+  // ---- ALL 63 PHOTOS ----
   const BASE = 'https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/';
   const photos = [
     // I — Identity
@@ -85,13 +85,13 @@
     { src: BASE + 'Follow%20the%20sun.JPG', title: 'Follow the Sun' },
     { src: BASE + 'Time%20for%20lights.jpg', title: 'Time for Lights' },
     { src: BASE + 'Glimpse.jpg', title: 'Glimpse' },
-    // III — Connection
+      { src: BASE + 'Beauty.jpg', title: 'Beauty' },   // III — Connection
     { src: BASE + 'Embrace.jpg', title: 'Embrace' },
     { src: BASE + 'Just%20us.jpg', title: 'Just Us' },
     { src: BASE + 'Hello%20stranger.jpg', title: 'Hello Stranger' },
     { src: BASE + 'Nuria%20Godvera.jpeg', title: 'Nuria Godvera' },
     { src: BASE + 'Michelle.jpg', title: 'Michelle' },
-    // IV — Solitude
+      { src: BASE + 'Valentina.jpg', title: 'Valentina' },   // IV — Solitude
     { src: BASE + 'Solitude.jpeg', title: 'Solitude' },
     { src: BASE + 'silent.jpg', title: 'Silent' },
     { src: BASE + 'Dark%20corners.jpg', title: 'Dark Corners' },
@@ -111,13 +111,13 @@
     { src: BASE + 'Maribor%20-%20Lent%20in%20winter.jpg', title: 'Maribor — Lent in Winter' },
     { src: BASE + 'On%20the%20go.JPG', title: 'On the Go' },
     { src: BASE + 'Slow%20grind.jpg', title: 'Slow Grind' },
-    // VIII — Nature & Space
+      { src: BASE + 'Notausgang.jpeg', title: 'Notausgang' },   // VIII — Nature & Space
     { src: BASE + 'Portal.jpg', title: 'Portal' },
     { src: BASE + 'Frozen%20in%20time.jpg', title: 'Frozen in Time' },
     { src: BASE + 'Center%20of%20gravity.jpg', title: 'Center of Gravity' },
     { src: BASE + 'Going%20up.jpg', title: 'Going Up' },
     { src: BASE + 'Compass.jpg', title: 'Compass' },
-    // IX — Objects & Machines
+      { src: BASE + 'Lindau.jpg', title: 'Lindau' },   // IX — Objects & Machines
     { src: BASE + 'Mustang.jpg', title: 'Mustang' },
     { src: BASE + 'NSB.jpg', title: 'NSB' },
     { src: BASE + 'Mesh.jpg', title: 'Mesh' },
@@ -128,19 +128,19 @@
     { src: BASE + 'Carpe%20diem.jpg', title: 'Carpe Diem' },
     { src: BASE + 'Lucky%20shot.jpg', title: 'Lucky Shot' },
     { src: BASE + 'Phoenix.JPG', title: 'Phoenix' },
-    // XI — Loss & Letting Go
+      { src: BASE + 'Ambition.jpeg', title: 'Ambition' },   // XI — Loss & Letting Go
     { src: BASE + 'Missing%20piece.jpg', title: 'Missing Piece' },
     { src: BASE + 'Let%20go.jpg', title: 'Let Go' },
     { src: BASE + 'Bureaucracy.jpg', title: 'Bureaucracy' },
     { src: BASE + 'Medo.jpg', title: 'Medo' },
     { src: BASE + 'Final%20line%20of%20a%20chapter.jpg', title: 'Final Line of a Chapter' },
-    // XII — Time
+      { src: BASE + 'Genocide%20memorial%20-%20Berlin.jpeg', title: 'Genocide Memorial — Berlin' },   { src: BASE + 'Neue%20Wache.jpeg', title: 'Neue Wache' },   { src: BASE + 'Topographie%20des%20Terrors.jpeg', title: 'Topographie des Terrors' },   // XII — Time
     { src: BASE + 'Set%20your%20life%20on%20fire.%20Seek%20those%20who%20fan%20your%20flames.jpg', title: 'Set Your Life on Fire' },
     { src: BASE + 'The%20time%20is%20now.jpg', title: 'The Time Is Now' },
     { src: BASE + 'Timing%20is%20everything.jpg', title: 'Timing Is Everything' },
     { src: BASE + "When%20the%20rich%20wage%20war%20it's%20the%20poor%20who%20die.jpg", title: 'When the Rich Wage War\u2026' },
     { src: BASE + 'Festina%20Lente.JPG', title: 'Festina Lente' },
-         { src: BASE + 'Memento%20Mori.jpg', title: 'Memento Mori' },
+         { src: BASE + '  { src: BASE + 'Your%20Path.jpeg', title: 'Your Path' },   { src: BASE + 'Memento%20Mori.jpg', title: 'Memento Mori' },
   ];
 
   // ---- LIGHTBOX ----
