@@ -137,9 +137,9 @@
     { src: BASE + 'Timing%20is%20everything.jpg', title: 'Timing Is Everything' },
     { src: BASE + "When%20the%20rich%20wage%20war%20it's%20the%20poor%20who%20die.jpg", title: 'When the Rich Wage War\u2026' },
     { src: BASE + 'Festina%20Lente.JPG', title: 'Festina Lente' },
-    { src: BASE + 'Your%20Path.jpeg', title: 'Your Path';
-    { src: BASE + 'Memento%20Mori.jpg', title: 'Memento Mori'
-      ];}
+    { src: BASE + 'Your%20Path.jpeg', title: 'Your Path },;
+    { src: BASE + 'Memento%20Mori.jpg', title: 'Memento Mor }i'
+      ]}
 
   // ---- LIGHTBOX ----
   const lightbox = document.getElementById('lightbox');
