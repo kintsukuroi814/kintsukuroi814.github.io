@@ -5,31 +5,35 @@
 (function () {
   'use strict';
 
-  // ---- THEME TOGGLE ----
+    // ---- THEME TOGGLE (with localStorage) ----
   const html = document.documentElement;
   const toggleBtn = document.querySelector('[data-theme-toggle]');
-
-  let currentTheme = 'dark';
+  
+  // Load saved theme from localStorage or default to 'dark'
+  let currentTheme = localStorage.getItem('theme') || 'dark';
   html.setAttribute('data-theme', currentTheme);
-
+  
   function setThemeIcon(theme) {
     if (!toggleBtn) return;
     if (theme === 'dark') {
-      toggleBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
+      toggleBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
       toggleBtn.setAttribute('aria-label', 'Switch to light mode');
     } else {
       toggleBtn.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
       toggleBtn.setAttribute('aria-label', 'Switch to dark mode');
     }
   }
-
+  
   setThemeIcon(currentTheme);
+  
   if (toggleBtn) {
     toggleBtn.addEventListener('click', () => {
       currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('theme', currentTheme);  // Save to localStorage
       setThemeIcon(currentTheme);
     });
+  }  });
   }
 
   // ---- HEADER SCROLL BEHAVIOUR ----
