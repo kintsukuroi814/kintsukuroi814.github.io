@@ -1213,5 +1213,85 @@ a {
 
   .story-modal__body {
     font-size: 1.05rem;
+
+     /* ==== KINTSUKUROI ANIMATED BACKGROUND ==== */
+
+/* Golden cracks animation container */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.08;
+  background: 
+    linear-gradient(135deg, transparent 40%, var(--text-xs) 40.5%, transparent 41%),
+    linear-gradient(45deg, transparent 45%, var(--text-xs) 45.5%, transparent 46%),
+    linear-gradient(225deg, transparent 52%, var(--text-xs) 52.5%, transparent 53%),
+    linear-gradient(-45deg, transparent 48%, var(--text-xs) 48.5%, transparent 49%);
+  background-size: 400% 400%, 500% 500%, 450% 450%, 480% 480%;
+  background-position: 0% 50%, 100% 0%, 50% 100%, 0% 0%;
+  animation: kintsugi-flow 60s ease-in-out infinite;
+  mix-blend-mode: overlay;
+}
+
+[data-theme="light"] body::before {
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+}
+
+@keyframes kintsugi-flow {
+  0%, 100% {
+    background-position: 0% 50%, 100% 0%, 50% 100%, 0% 0%;
+  }
+  25% {
+    background-position: 50% 100%, 0% 50%, 100% 0%, 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%, 50% 100%, 0% 50%, 100% 0%;
+  }
+  75% {
+    background-position: 50% 0%, 100% 50%, 50% 0%, 0% 50%;
+  }
+}
+
+/* Subtle golden shimmer particles */
+body::after {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    radial-gradient(circle at 20% 30%, var(--text-xs) 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, var(--text-xs) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, var(--text-xs) 1px, transparent 1px),
+    radial-gradient(circle at 90% 20%, var(--text-xs) 1px, transparent 1px),
+    radial-gradient(circle at 10% 60%, var(--text-xs) 1px, transparent 1px),
+    radial-gradient(circle at 60% 40%, var(--text-xs) 1px, transparent 1px);
+  background-size: 300px 300px, 400px 400px, 350px 350px, 450px 450px, 380px 380px, 420px 420px;
+  background-position: 0 0, 100px 100px, 200px 50px, 50px 200px, 150px 150px, 250px 100px;
+  opacity: 0.15;
+  animation: shimmer-drift 120s linear infinite;
+}
+
+[data-theme="light"] body::after {
+  opacity: 0.1;
+}
+
+@keyframes shimmer-drift {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate(-5%, -5%) rotate(360deg);
+  }
+}
   }
 }
