@@ -72,47 +72,47 @@
   const BASE = 'https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/';
   const photos = [
     // I — Identity
-    { src: BASE + 'Kint%20Sugi.jpg', title: 'Kint Sugi' },
-    { src: BASE + 'Know%20thyself.jpg', title: 'Know Thyself' },
-    { src: BASE + 'Inner%20world.jpeg', title: 'Inner World' },
+    { src: BASE + 'Kint Sugi.jpg', title: 'Kint Sugi' },
+    { src: BASE + 'Know thyself.jpg', title: 'Know Thyself' },
+    { src: BASE + 'Inner world.jpeg', title: 'Inner World' },
     { src: BASE + 'Epiphany.jpg', title: 'Epiphany' },
     { src: BASE + 'Wisdom.jpg', title: 'Wisdom' },
     // II — Light
     { src: BASE + 'Illuminate.jpg', title: 'Illuminate' },
-    { src: BASE + 'Follow%20the%20sun.JPG', title: 'Follow the Sun' },
-    { src: BASE + 'Time%20for%20lights.jpg', title: 'Time for Lights' },
+    { src: BASE + 'Follow the sun.JPG', title: 'Follow the Sun' },
+    { src: BASE + 'Time for lights.jpg', title: 'Time for Lights' },
     { src: BASE + 'Glimpse.jpg', title: 'Glimpse' },
       { src: BASE + 'Beauty.jpg', title: 'Beauty' },   // III — Connection
     { src: BASE + 'Embrace.jpg', title: 'Embrace' },
-    { src: BASE + 'Just%20us.jpg', title: 'Just Us' },
-    { src: BASE + 'Hello%20stranger.jpg', title: 'Hello Stranger' },
-    { src: BASE + 'Nuria%20Godvera.jpeg', title: 'Nuria Godvera' },
+    { src: BASE + 'Just us.jpg', title: 'Just Us' },
+    { src: BASE + 'Hello stranger.jpg', title: 'Hello Stranger' },
+    { src: BASE + 'Nuria Godvera.jpeg', title: 'Nuria Godvera' },
     { src: BASE + 'Michelle.jpg', title: 'Michelle' },
       { src: BASE + 'Valentina.jpg', title: 'Valentina' },   // IV — Solitude
     { src: BASE + 'Solitude.jpeg', title: 'Solitude' },
     { src: BASE + 'silent.jpg', title: 'Silent' },
-    { src: BASE + 'Dark%20corners.jpg', title: 'Dark Corners' },
-    { src: BASE + 'In%20between.jpg', title: 'In Between' },
+    { src: BASE + 'Dark corners.jpg', title: 'Dark Corners' },
+    { src: BASE + 'In between.jpg', title: 'In Between' },
     // V — Body & Existence
-    { src: BASE + 'Dead%20skin.jpg', title: 'Dead Skin' },
-    { src: BASE + 'Hold%20on%20to%20yourself.jpeg', title: 'Hold On to Yourself' },
+    { src: BASE + 'Dead skin.jpg', title: 'Dead Skin' },
+    { src: BASE + 'Hold on to yourself.jpeg', title: 'Hold On to Yourself' },
     { src: BASE + 'Burnout.jpeg', title: 'Burnout' },
-    { src: BASE + 'Out%20of%20the%20comfort%20zone.jpg', title: 'Out of the Comfort Zone' },
+    { src: BASE + 'Out of the comfort zone.jpg', title: 'Out of the Comfort Zone' },
     // VI — Sound & Rhythm
     { src: BASE + 'Drummer.JPG', title: 'Drummer' },
-    { src: BASE + 'Sleeping%20piano.jpg', title: 'Sleeping Piano' },
-    { src: BASE + 'Strings%20of%20sanity.jpg', title: 'Strings of Sanity' },
-    { src: BASE + 'Rocket%20Man.jpeg', title: 'Rocket Man' },
+    { src: BASE + 'Sleeping piano.jpg', title: 'Sleeping Piano' },
+    { src: BASE + 'Strings of sanity.jpg', title: 'Strings of Sanity' },
+    { src: BASE + 'Rocket Man.jpeg', title: 'Rocket Man' },
     // VII — City & Street
     { src: BASE + 'Street.JPG', title: 'Street' },
-    { src: BASE + 'Maribor%20-%20Lent%20in%20winter.jpg', title: 'Maribor — Lent in Winter' },
-    { src: BASE + 'On%20the%20go.JPG', title: 'On the Go' },
-    { src: BASE + 'Slow%20grind.jpg', title: 'Slow Grind' },
+    { src: BASE + 'Maribor - Lent in winter.jpg', title: 'Maribor — Lent in Winter' },
+    { src: BASE + 'On the go.JPG', title: 'On the Go' },
+    { src: BASE + 'Slow grind.jpg', title: 'Slow Grind' },
       { src: BASE + 'Notausgang.jpeg', title: 'Notausgang' },   // VIII — Nature & Space
     { src: BASE + 'Portal.jpg', title: 'Portal' },
-    { src: BASE + 'Frozen%20in%20time.jpg', title: 'Frozen in Time' },
-    { src: BASE + 'Center%20of%20gravity.jpg', title: 'Center of Gravity' },
-    { src: BASE + 'Going%20up.jpg', title: 'Going Up' },
+    { src: BASE + 'Frozen in time.jpg', title: 'Frozen in Time' },
+    { src: BASE + 'Center of gravity.jpg', title: 'Center of Gravity' },
+    { src: BASE + 'Going up.jpg', title: 'Going Up' },
     { src: BASE + 'Compass.jpg', title: 'Compass' },
       { src: BASE + 'Lindau.jpg', title: 'Lindau' },   // IX — Objects & Machines
     { src: BASE + 'Mustang.jpg', title: 'Mustang' },
@@ -120,25 +120,25 @@
     { src: BASE + 'Mesh.jpg', title: 'Mesh' },
     { src: BASE + 'Desceptor.jpg', title: 'Desceptor' },
     // X — Power & Freedom
-    { src: BASE + 'Power%20of%20freedom.jpg', title: 'Power of Freedom' },
+    { src: BASE + 'Power of freedom.jpg', title: 'Power of Freedom' },
     { src: BASE + 'Strive.jpg', title: 'Strive' },
-    { src: BASE + 'Carpe%20diem.jpg', title: 'Carpe Diem' },
-    { src: BASE + 'Lucky%20shot.jpg', title: 'Lucky Shot' },
+    { src: BASE + 'Carpe diem.jpg', title: 'Carpe Diem' },
+    { src: BASE + 'Lucky shot.jpg', title: 'Lucky Shot' },
     { src: BASE + 'Phoenix.JPG', title: 'Phoenix' },
 140
-     { src: BASE + 'Missing%20piece.jpg', title: 'Missing Piece' },
-    { src: BASE + 'Let%20go.jpg', title: 'Let Go' },
+     { src: BASE + 'Missing piece.jpg', title: 'Missing Piece' },
+    { src: BASE + 'Let go.jpg', title: 'Let Go' },
     { src: BASE + 'Bureaucracy.jpg', title: 'Bureaucracy' },
     { src: BASE + 'Medo.jpg', title: 'Medo' },
-    { src: BASE + 'Final%20line%20of%20a%20chapter.jpg', title: 'Final Line of a Chapter' },
-      { src: BASE + 'Genocide%20memorial%20-%20Berlin.jpeg', title: 'Genocide Memorial — Berlin' },   { src: BASE + 'Neue%20Wache.jpeg', title: 'Neue Wache' },   { src: BASE + 'Topographie%20des%20Terrors.jpeg', title: 'Topographie des Terrors' },   // XII — Time
-    { src: BASE + 'Set%20your%20life%20on%20fire.%20Seek%20those%20who%20fan%20your%20flames.jpg', title: 'Set Your Life on Fire' },
-    { src: BASE + 'The%20time%20is%20now.jpg', title: 'The Time Is Now' },
-    { src: BASE + 'Timing%20is%20everything.jpg', title: 'Timing Is Everything' },
-    { src: BASE + "When%20the%20rich%20wage%20war%20it's%20the%20poor%20who%20die.jpg", title: 'When the Rich Wage War\u2026' },
-    { src: BASE + 'Festina%20Lente.JPG', title: 'Festina Lente' },
-    { src: BASE + 'Your%20Path.jpeg', title: 'Your Path },;
-    { src: BASE + 'Memento%20Mori.jpg', title: 'Memento Mor }i'
+    { src: BASE + 'Final line of a chapter.jpg', title: 'Final Line of a Chapter' },
+      { src: BASE + 'Genocide memorial - Berlin.jpeg', title: 'Genocide Memorial — Berlin' },   { src: BASE + 'Neue Wache.jpeg', title: 'Neue Wache' },   { src: BASE + 'Topographie des Terrors.jpeg', title: 'Topographie des Terrors' },   // XII — Time
+    { src: BASE + 'Set your life on fire. Seek those who fan your flames.jpg', title: 'Set Your Life on Fire' },
+    { src: BASE + 'The time is now.jpg', title: 'The Time Is Now' },
+    { src: BASE + 'Timing is everything.jpg', title: 'Timing Is Everything' },
+    { src: BASE + "When the rich wage war it's the poor who die.jpg", title: 'When the Rich Wage War\u2026' },
+    { src: BASE + 'Festina Lente.JPG', title: 'Festina Lente' },
+    { src: BASE + 'Your Path.jpeg', title: 'Your Path },;
+    { src: BASE + 'Memento Mori.jpg', title: 'Memento Mor }i'
       ]}
 
   // ---- LIGHTBOX ----
