@@ -1,186 +1,291 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8">
-    <title>Kintsukuroi — Photography Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kintsukuroi — Photography</title>
+  <meta name="description" content="Photography portfolio — a photographic diary. Based in Maribor, Slovenia.">
+  <meta property="og:title" content="kintsukuroi — Photography">
+  <meta property="og:description" content="Photography portfolio — a photographic diary. Based in Maribor, Slovenia.">
+  <meta property="og:type" content="website">
 
-    <!-- Fonts (example – adjust if you already host them differently) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <!-- Kintsukuroi animated background layer -->
-    <div class="kintsu-flow-layer" aria-hidden="true"></div>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- HEADER -->
-    <header id="header" class="header">
-      <nav class="nav-inner">
-        <a href="#top" class="logo">KINTSUKUROI</a>
-
-        <div class="nav-links">
-          <a href="#gallery" class="nav-link">Gallery</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </div>
-
-        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
-
-        <button id="hamburger" class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-
-      <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
-        <a href="#gallery" class="mobile-nav-link">Gallery</a>
-        <a href="#about" class="mobile-nav-link">About</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="nav-inner">
+      <a href="#" class="logo" aria-label="kintsukuroi photography">
+        <svg viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="120" height="36">
+          <line x1="8" y1="6" x2="8" y2="30" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="8" y1="18" x2="18" y2="6" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="8" y1="18" x2="18" y2="30" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M24 30 L29 20 L26 14 L32 6" stroke="#b89a5a" stroke-width="0.8" stroke-linecap="round"/>
+          <circle cx="32" cy="5.5" r="1.5" fill="#b89a5a"/>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="#gallery" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </div>
-    </header>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <a href="#gallery" class="mobile-nav-link">Work</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+    </div>
+  </header>
 
-    <!-- HERO -->
-    <main id="top">
-      <section class="hero">
-        <div class="fade-in">
-          <div class="hero-label">Photography as Kintsukuroi</div>
-        </div>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-label fade-in">Photography</p>
+      <h1 class="hero-title fade-in">
+        <em>kintsugi</em><br>
+        <span>through the lens</span>
+      </h1>
+      <p class="hero-sub fade-in">The art of finding beauty in the broken, the half-lit, and the in-between.</p>
+      <a href="#gallery" class="hero-cta fade-in">View the work</a>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-        <div class="fade-in">
-          <h1 class="hero-title">
-            Fragments <em>made</em> whole
-            <span>Stories of light, fracture and quiet resilience.</span>
-          </h1>
-        </div>
-
-        <div class="fade-in">
-          <p class="hero-sub">
-            A slow, cinematic walk through the moments that cracked you open – and the gold that held you together.
-          </p>
-        </div>
-
-        <div class="fade-in">
-          <a href="#gallery" class="hero-cta">Enter the gallery</a>
-        </div>
-
-        <div class="hero-scroll-hint">
-          <span>Scroll to wander</span>
-          <div class="scroll-line"></div>
-        </div>
-      </section>
-
-      <!-- GALLERY -->
-      <section id="gallery" class="gallery-section">
-        <header class="gallery-header">
-          <h2 class="section-title">Alive fragments</h2>
-          <p class="section-sub">A living, breathing collection — never quite the same twice.</p>
-        </header>
-
-        <!-- Example chapter divider (you can add more) -->
-        <div class="chapter-label">
-          <span>I — Identity</span>
-        </div>
-
-        <div class="masonry-grid" id="gallery-grid">
-          <!-- JS will inject .photo-item elements based on the photos[] array -->
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="about-section">
-        <div class="about-inner">
-          <div class="about-text">
-            <h2 class="section-title">About Kintsukuroi</h2>
-            <p class="about-body">
-              Photography as a way of tracing cracks — the fractures in people, cities, bodies, time — and filling them with light instead of hiding them.
-              Each image is a small act of <em>repair</em>, a quiet celebration of the places where life did not go as planned, but still found a way to shine through.
-            </p>
-            <p class="about-body">
-              This is not a gallery of perfection. It is a room full of almosts, not‑yets, and still‑heres, held together with the gold of attention.
-            </p>
-            <a href="#contact" class="about-link">Let’s talk</a>
-          </div>
-
-          <div class="about-image-wrap">
-            <img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Kint%20Sugi.jpg"
-                 alt="A photograph symbolizing kintsukuroi – broken yet luminous."
-                 class="about-img">
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="contact-section">
-        <div class="contact-inner">
-          <h2 class="section-title">Get in touch</h2>
-          <p class="contact-sub">
-            For collaborations, exhibitions, prints, or just to say “I felt that too.”
-          </p>
-          <a href="mailto:kintsukuroi.gallery@example.com" class="contact-email">
-            kintsukuroi.gallery@example.com
-          </a>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-text">
-        © Kintsukuroi — an ongoing conversation between fracture and light.
-      </div>
-    </footer>
-
-    <!-- LIGHTBOX -->
-    <div id="lightbox" class="lightbox" aria-hidden="true">
-      <div id="lightbox-backdrop" class="lightbox-backdrop"></div>
-      <div class="lightbox-container">
-        <button id="lightbox-close" class="lightbox-close" aria-label="Close">&times;</button>
-        <button id="lightbox-prev" class="lightbox-prev" aria-label="Previous image">&#10094;</button>
-        <div class="lightbox-img-wrap">
-          <img id="lightbox-img" class="lightbox-img" src="" alt="">
-        </div>
-        <button id="lightbox-next" class="lightbox-next" aria-label="Next image">&#10095;</button>
-        <div class="lightbox-caption">
-          <div id="lightbox-title" class="lightbox-title-text"></div>
-          <div id="lightbox-counter" class="lightbox-counter-text"></div>
-        </div>
-      </div>
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-header">
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-sub">63 photographs — Maribor &amp; beyond</p>
     </div>
 
-    <!-- STORY MODAL: "Bring me a cup of tea" -->
-    <div class="story-modal" id="story-modal" aria-hidden="true">
-      <div class="story-modal__backdrop" data-story-close></div>
-      <article class="story-modal__content" role="dialog" aria-modal="true" aria-labelledby="story-modal-title">
-        <button class="story-modal__close" type="button" aria-label="Close story" data-story-close>&times;</button>
-        <header class="story-modal__header">
-          <h2 class="story-modal__title" id="story-modal-title">Bring me a cup of tea</h2>
-          <p class="story-modal__subtitle">Memento Mori — a story in one room</p>
-        </header>
-        <div class="story-modal__body">
-          <!-- STORY TEXT – EXACTLY AS IN index-6.html -->
-          <p>Bring me a cup of tea..</p>
-          <p>I am glad you exist.</p>
-          <p>“You gave meaning to my life,” he said, as he carefully wrapped both hands around the warm ceramic cup. His eyes were tired, yet lucid. Full of something I couldn’t name.</p>
-          <p>I nodded slowly, the way you do when words feel too heavy to carry.</p>
-          <p>“I was never afraid of dying,” he continued. “But I was terrified of leaving before I mattered.”</p>
-          <p>Outside, the light was doing that thing it does in autumn — slanting gold through thin curtains, making everything look like memory before it even becomes one.</p>
-          <p>“Do you think a person can feel when they’ve done enough?” he asked.</p>
-          <p>I thought about it. Really thought about it.</p>
-          <p>“I think,” I said, “some people feel it in their chest. Like a settling. Like the last note of a song that didn’t need a longer ending.”</p>
-          <p>He smiled. Not the polite kind. The real kind. The kind that lives somewhere behind the eyes.</p>
-          <p>“That’s exactly it,” he said. “That’s exactly what this feels like.”</p>
-          <p>We sat for a while after that. The tea went cold. Neither of us moved to warm it.</p>
-          <p>There are moments that don’t ask to be remembered — they simply stay.</p>
-          <p>I nodded, as if I understood him clearly, and looked back out the window.</p>
-          <p>He took another sip of the tea and a defiant smile emerged.</p>
-        </div>
-      </article>
+    <!-- Chapter I -->
+    <div class="chapter-label"><span>I — Identity</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="0" tabindex="0" role="button" aria-label="Open photo: Kint Sugi"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Kint%20Sugi.jpg" alt="Kint Sugi" loading="lazy"><div class="photo-overlay"><span class="photo-title">Kint Sugi</span></div></div></div>
+      <div class="photo-item" data-index="1" tabindex="0" role="button" aria-label="Open photo: Know Thyself"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Know%20thyself.jpg" alt="Know Thyself" loading="lazy"><div class="photo-overlay"><span class="photo-title">Know Thyself</span></div></div></div>
+      <div class="photo-item" data-index="2" tabindex="0" role="button" aria-label="Open photo: Inner World"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Inner%20world.jpeg" alt="Inner World" loading="lazy"><div class="photo-overlay"><span class="photo-title">Inner World</span></div></div></div>
+      <div class="photo-item" data-index="3" tabindex="0" role="button" aria-label="Open photo: Epiphany"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Epiphany.jpg" alt="Epiphany" loading="lazy"><div class="photo-overlay"><span class="photo-title">Epiphany</span></div></div></div>
+            <div class="photo-item" data-index="4" tabindex="0" role="button" aria-label="Open photo: Wisdom"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Wisdom.jpg" alt="Wisdom" loading="lazy"><div class="photo-overlay"><span class="photo-title">Wisdom</span></div></div></div>
     </div>
 
-    <!-- JS -->
-    <script src="main.js"></script>
-  </body>
+    <!-- Chapter II -->
+    <div class="chapter-label"><span>II — Light</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="5" tabindex="0" role="button" aria-label="Open photo: Illuminate"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Illuminate.jpg" alt="Illuminate" loading="lazy"><div class="photo-overlay"><span class="photo-title">Illuminate</span></div></div></div>
+      <div class="photo-item" data-index="6" tabindex="0" role="button" aria-label="Open photo: Follow the Sun"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Follow%20the%20sun.JPG" alt="Follow the Sun" loading="lazy"><div class="photo-overlay"><span class="photo-title">Follow the Sun</span></div></div></div>
+      <div class="photo-item" data-index="7" tabindex="0" role="button" aria-label="Open photo: Time for Lights"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Time%20for%20lights.jpg" alt="Time for Lights" loading="lazy"><div class="photo-overlay"><span class="photo-title">Time for Lights</span></div></div></div>
+      <div class="photo-item" data-index="8" tabindex="0" role="button" aria-label="Open photo: Glimpse"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Glimpse.jpg" alt="Glimpse" loading="lazy"><div class="photo-overlay"><span class="photo-title">Glimpse</span></div></div></div>
+              <div class="photo-item" data-index="9" tabindex="0" role="button" aria-label="Open photo: Beauty"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Beauty.jpg" alt="Beauty" loading="lazy"><div class="photo-overlay"><span class="photo-title">Beauty</span></div></div></div>
+    </div>
+
+    <!-- Chapter III -->
+    <div class="chapter-label"><span>III — Connection</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="10" tabindex="0" role="button" aria-label="Open photo: Embrace"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Embrace.jpg" alt="Embrace" loading="lazy"><div class="photo-overlay"><span class="photo-title">Embrace</span></div></div></div>
+      <div class="photo-item" data-index="11" tabindex="0" role="button" aria-label="Open photo: Just Us"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Just%20us.jpg" alt="Just Us" loading="lazy"><div class="photo-overlay"><span class="photo-title">Just Us</span></div></div></div>
+      <div class="photo-item" data-index="12" tabindex="0" role="button" aria-label="Open photo: Hello Stranger"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Hello%20stranger.jpg" alt="Hello Stranger" loading="lazy"><div class="photo-overlay"><span class="photo-title">Hello Stranger</span></div></div></div>
+      <div class="photo-item" data-index="13" tabindex="0" role="button" aria-label="Open photo: Nuria Godvera"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Nuria%20Godvera.jpeg" alt="Nuria Godvera" loading="lazy"><div class="photo-overlay"><span class="photo-title">Nuria Godvera</span></div></div></div>
+            <div class="photo-item" data-index="14" tabindex="0" role="button" aria-label="Open photo: Michelle"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Michelle.jpg" alt="Michelle" loading="lazy"><div class="photo-overlay"><span class="photo-title">Michelle</span></div></div></div>
+              <div class="photo-item" data-index="15" tabindex="0" role="button" aria-label="Open photo: Valentina"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Valentina.jpg" alt="Valentina" loading="lazy"><div class="photo-overlay"><span class="photo-title">Valentina</span></div></div></div>
+    </div>
+
+    <!-- Chapter IV -->
+    <div class="chapter-label"><span>IV — Solitude</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="16" tabindex="0" role="button" aria-label="Open photo: Solitude"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Solitude.jpeg" alt="Solitude" loading="lazy"><div class="photo-overlay"><span class="photo-title">Solitude</span></div></div></div>
+      <div class="photo-item" data-index="17" tabindex="0" role="button" aria-label="Open photo: Silent"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/silent.jpg" alt="Silent" loading="lazy"><div class="photo-overlay"><span class="photo-title">Silent</span></div></div></div>
+      <div class="photo-item" data-index="18" tabindex="0" role="button" aria-label="Open photo: Dark Corners"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Dark%20corners.jpg" alt="Dark Corners" loading="lazy"><div class="photo-overlay"><span class="photo-title">Dark Corners</span></div></div></div>
+      <div class="photo-item" data-index="19" tabindex="0" role="button" aria-label="Open photo: In Between"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/In%20between.jpg" alt="In Between" loading="lazy"><div class="photo-overlay"><span class="photo-title">In Between</span></div></div></div>
+    </div>
+
+    <!-- Chapter V -->
+    <div class="chapter-label"><span>V — Body &amp; Existence</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="20" tabindex="0" role="button" aria-label="Open photo: Dead Skin"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Dead%20skin.jpg" alt="Dead Skin" loading="lazy"><div class="photo-overlay"><span class="photo-title">Dead Skin</span></div></div></div>
+      <div class="photo-item" data-index="21" tabindex="0" role="button" aria-label="Open photo: Hold On to Yourself"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Hold%20on%20to%20yourself.jpeg" alt="Hold On to Yourself" loading="lazy"><div class="photo-overlay"><span class="photo-title">Hold On to Yourself</span></div></div></div>
+      <div class="photo-item" data-index="22" tabindex="0" role="button" aria-label="Open photo: Burnout"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Burnout.jpeg" alt="Burnout" loading="lazy"><div class="photo-overlay"><span class="photo-title">Burnout</span></div></div></div>
+      <div class="photo-item" data-index="23" tabindex="0" role="button" aria-label="Open photo: Out of the Comfort Zone"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Out%20of%20the%20comfort%20zone.jpg" alt="Out of the Comfort Zone" loading="lazy"><div class="photo-overlay"><span class="photo-title">Out of the Comfort Zone</span></div></div></div>
+    </div>
+
+    <!-- Chapter VI -->
+    <div class="chapter-label"><span>VI — Sound &amp; Rhythm</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="24" tabindex="0" role="button" aria-label="Open photo: Drummer"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Drummer.JPG" alt="Drummer" loading="lazy"><div class="photo-overlay"><span class="photo-title">Drummer</span></div></div></div>
+      <div class="photo-item" data-index="25" tabindex="0" role="button" aria-label="Open photo: Sleeping Piano"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Sleeping%20piano.jpg" alt="Sleeping Piano" loading="lazy"><div class="photo-overlay"><span class="photo-title">Sleeping Piano</span></div></div></div>
+      <div class="photo-item" data-index="26" tabindex="0" role="button" aria-label="Open photo: Strings of Sanity"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Strings%20of%20sanity.jpg" alt="Strings of Sanity" loading="lazy"><div class="photo-overlay"><span class="photo-title">Strings of Sanity</span></div></div></div>
+      <div class="photo-item" data-index="27" tabindex="0" role="button" aria-label="Open photo: Rocket Man"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Rocket%20Man.jpeg" alt="Rocket Man" loading="lazy"><div class="photo-overlay"><span class="photo-title">Rocket Man</span></div></div></div>
+    </div>
+
+    <!-- Chapter VII -->
+    <div class="chapter-label"><span>VII — City &amp; Street</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="28" tabindex="0" role="button" aria-label="Open photo: Street"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Street.JPG" alt="Street" loading="lazy"><div class="photo-overlay"><span class="photo-title">Street</span></div></div></div>
+      <div class="photo-item" data-index="29" tabindex="0" role="button" aria-label="Open photo: Maribor — Lent in Winter"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Maribor%20-%20Lent%20in%20winter.jpg" alt="Maribor — Lent in Winter" loading="lazy"><div class="photo-overlay"><span class="photo-title">Maribor — Lent in Winter</span></div></div></div>
+      <div class="photo-item" data-index="30" tabindex="0" role="button" aria-label="Open photo: On the Go"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/On%20the%20go.JPG" alt="On the Go" loading="lazy"><div class="photo-overlay"><span class="photo-title">On the Go</span></div></div></div>
+      <div class="photo-item" data-index="31" tabindex="0" role="button" aria-label="Open photo: Slow Grind"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Slow%20grind.jpg" alt="Slow Grind" loading="lazy"><div class="photo-overlay"><span class="photo-title">Slow Grind</span></div></div></div>
+              <div class="photo-item" data-index="32" tabindex="0" role="button" aria-label="Open photo: Notausgang"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Notausgang.jpeg" alt="Notausgang" loading="lazy"><div class="photo-overlay"><span class="photo-title">Notausgang</span></div></div></div>
+    </div>
+
+    <!-- Chapter VIII -->
+    <div class="chapter-label"><span>VIII — Nature &amp; Space</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="33" tabindex="0" role="button" aria-label="Open photo: Portal"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Portal.jpg" alt="Portal" loading="lazy"><div class="photo-overlay"><span class="photo-title">Portal</span></div></div></div>
+      <div class="photo-item" data-index="34" tabindex="0" role="button" aria-label="Open photo: Frozen in Time"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Frozen%20in%20time.jpg" alt="Frozen in Time" loading="lazy"><div class="photo-overlay"><span class="photo-title">Frozen in Time</span></div></div></div>
+      <div class="photo-item" data-index="35" tabindex="0" role="button" aria-label="Open photo: Center of Gravity"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Center%20of%20gravity.jpg" alt="Center of Gravity" loading="lazy"><div class="photo-overlay"><span class="photo-title">Center of Gravity</span></div></div></div>
+      <div class="photo-item" data-index="36" tabindex="0" role="button" aria-label="Open photo: Going Up"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Going%20up.jpg" alt="Going Up" loading="lazy"><div class="photo-overlay"><span class="photo-title">Going Up</span></div></div></div>
+            <div class="photo-item" data-index="37" tabindex="0" role="button" aria-label="Open photo: Compass"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Compass.jpg" alt="Compass" loading="lazy"><div class="photo-overlay"><span class="photo-title">Compass</span></div></div></div>
+              <div class="photo-item" data-index="38" tabindex="0" role="button" aria-label="Open photo: Lindau"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Lindau.jpg" alt="Lindau" loading="lazy"><div class="photo-overlay"><span class="photo-title">Lindau</span></div></div></div>
+    </div>
+
+    <!-- Chapter IX -->
+    <div class="chapter-label"><span>IX — Objects &amp; Machines</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="39" tabindex="0" role="button" aria-label="Open photo: Mustang"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Mustang.jpg" alt="Mustang" loading="lazy"><div class="photo-overlay"><span class="photo-title">Mustang</span></div></div></div>
+      <div class="photo-item" data-index="40" tabindex="0" role="button" aria-label="Open photo: NSB"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/NSB.jpg" alt="NSB" loading="lazy"><div class="photo-overlay"><span class="photo-title">NSB</span></div></div></div>
+      <div class="photo-item" data-index="41" tabindex="0" role="button" aria-label="Open photo: Mesh"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Mesh.jpg" alt="Mesh" loading="lazy"><div class="photo-overlay"><span class="photo-title">Mesh</span></div></div></div>
+      <div class="photo-item" data-index="42" tabindex="0" role="button" aria-label="Open photo: Desceptor"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Desceptor.jpg" alt="Desceptor" loading="lazy"><div class="photo-overlay"><span class="photo-title">Desceptor</span></div></div></div>
+    </div>
+
+    <!-- Chapter X -->
+    <div class="chapter-label"><span>X — Power &amp; Freedom</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="43" tabindex="0" role="button" aria-label="Open photo: Power of Freedom"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Power%20of%20freedom.jpg" alt="Power of Freedom" loading="lazy"><div class="photo-overlay"><span class="photo-title">Power of Freedom</span></div></div></div>
+      <div class="photo-item" data-index="44" tabindex="0" role="button" aria-label="Open photo: Strive"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Strive.jpg" alt="Strive" loading="lazy"><div class="photo-overlay"><span class="photo-title">Strive</span></div></div></div>
+      <div class="photo-item" data-index="45" tabindex="0" role="button" aria-label="Open photo: Carpe Diem"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Carpe%20diem.jpg" alt="Carpe Diem" loading="lazy"><div class="photo-overlay"><span class="photo-title">Carpe Diem</span></div></div></div>
+      <div class="photo-item" data-index="46" tabindex="0" role="button" aria-label="Open photo: Lucky Shot"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Lucky%20shot.jpg" alt="Lucky Shot" loading="lazy"><div class="photo-overlay"><span class="photo-title">Lucky Shot</span></div></div></div>
+            <div class="photo-item" data-index="47" tabindex="0" role="button" aria-label="Open photo: Phoenix"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Phoenix.JPG" alt="Phoenix" loading="lazy"><div class="photo-overlay"><span class="photo-title">Phoenix</span></div></div></div>
+    </div>
+
+    <!-- Chapter XI -->
+    <div class="chapter-label"><span>XI — Loss &amp; Letting Go</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="49" tabindex="0" role="button" aria-label="Open photo: Missing Piece"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Missing%20piece.jpg" alt="Missing Piece" loading="lazy"><div class="photo-overlay"><span class="photo-title">Missing Piece</span></div></div></div>
+      <div class="photo-item" data-index="50" tabindex="0" role="button" aria-label="Open photo: Let Go"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Let%20go.jpg" alt="Let Go" loading="lazy"><div class="photo-overlay"><span class="photo-title">Let Go</span></div></div></div>
+      <div class="photo-item" data-index="51" tabindex="0" role="button" aria-label="Open photo: Bureaucracy"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Bureaucracy.jpg" alt="Bureaucracy" loading="lazy"><div class="photo-overlay"><span class="photo-title">Bureaucracy</span></div></div></div>
+      <div class="photo-item" data-index="52" tabindex="0" role="button" aria-label="Open photo: Medo"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Medo.jpg" alt="Medo" loading="lazy"><div class="photo-overlay"><span class="photo-title">Medo</span></div></div></div>
+            <div class="photo-item" data-index="53" tabindex="0" role="button" aria-label="Open photo: Final Line of a Chapter"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Final%20line%20of%20a%20chapter.jpg" alt="Final Line of a Chapter" loading="lazy"><div class="photo-overlay"><span class="photo-title">Final Line of a Chapter</span></div></div></div>
+              <div class="photo-item" data-index="54" tabindex="0" role="button" aria-label="Open photo: Genocide Memorial — Berlin"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Genocide%20memorial%20-%20Berlin.jpeg" alt="Genocide Memorial — Berlin" loading="lazy"><div class="photo-overlay"><span class="photo-title">Genocide Memorial — Berlin</span></div></div></div>
+              <div class="photo-item" data-index="55" tabindex="0" role="button" aria-label="Open photo: Neue Wache"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Neue%20Wache.jpeg" alt="Neue Wache" loading="lazy"><div class="photo-overlay"><span class="photo-title">Neue Wache</span></div></div></div>
+              <div class="photo-item" data-index="56" tabindex="0" role="button" aria-label="Open photo: Topographie des Terrors"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Topographie%20des%20Terrors.jpeg" alt="Topographie des Terrors" loading="lazy"><div class="photo-overlay"><span class="photo-title">Topographie des Terrors</span></div></div></div>
+    </div>
+
+    <!-- Chapter XII -->
+    <div class="chapter-label"><span>XII — Time</span></div>
+    <div class="masonry-grid">
+      <div class="photo-item" data-index="57" tabindex="0" role="button" aria-label="Open photo: Set Your Life on Fire"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Set%20your%20life%20on%20fire.%20Seek%20those%20who%20fan%20your%20flames.jpg" alt="Set Your Life on Fire" loading="lazy"><div class="photo-overlay"><span class="photo-title">Set Your Life on Fire</span></div></div></div>
+      <div class="photo-item" data-index="58" tabindex="0" role="button" aria-label="Open photo: The Time Is Now"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/The%20time%20is%20now.jpg" alt="The Time Is Now" loading="lazy"><div class="photo-overlay"><span class="photo-title">The Time Is Now</span></div></div></div>
+      <div class="photo-item" data-index="59" tabindex="0" role="button" aria-label="Open photo: Timing Is Everything"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Timing%20is%20everything.jpg" alt="Timing Is Everything" loading="lazy"><div class="photo-overlay"><span class="photo-title">Timing Is Everything</span></div></div></div>
+      <div class="photo-item" data-index="60" tabindex="0" role="button" aria-label="Open photo: When the Rich Wage War"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/When%20the%20rich%20wage%20war%20it's%20the%20poor%20who%20die.jpg" alt="When the rich wage war it's the poor who die" loading="lazy"><div class="photo-overlay"><span class="photo-title">When the Rich Wage War…</span></div></div></div>
+            <div class="photo-item" data-index="61" tabindex="0" role="button" aria-label="Open photo: Festina Lente"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Festina%20Lente.JPG" alt="Festina Lente" loading="lazy"><div class="photo-overlay"><span class="photo-title">Festina Lente</span></div></div></div>
+              <div class="photo-item" data-index="62" tabindex="0" role="button" aria-label="Open photo: Your Path"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Your%20Path.jpeg" alt="Your Path" loading="lazy"><div class="photo-overlay"><span class="photo-title">Your Path</span></div></div></div>
+                          <div class="photo-item photo-item--story-trigger" data-index="63" tabindex="0" role="button" aria-label="Open photo: Memento Mori"><div class="photo-wrap"><img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Memento%20Mori.jpg" alt="Memento Mori" loading="lazy"><div class="photo-overlay"><span class="photo-title">Memento Mori</span></div></div><button class="story-open-btn" aria-label="Read the story" onclick="document.getElementById('story-modal').classList.add('is-open');document.body.style.overflow='hidden';event.stopPropagation()">Read the story →</button></div>
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2 class="section-title">About</h2>
+        <p class="about-body">
+          I am a photographer based in Maribor, Slovenia. I love capturing moments in my life
+          that are somewhat of a photographic diary — only I know the meaning of.
+        </p>
+        <a href="#contact" class="about-link">Get in touch →</a>
+                <a href="javascript:void(0);" class="about-link" onclick="document.getElementById('story-modal').classList.add('is-open');document.body.style.overflow='hidden'">Read my story →</a>
+      </div>
+      <div class="about-image-wrap">
+        <img src="https://raw.githubusercontent.com/kintsukuroi814/portfolio/main/Sleeping%20piano.jpg" alt="Sleeping Piano" class="about-img" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-inner">
+      <h2 class="section-title">Say hello</h2>
+      <p class="contact-sub">For collaborations, prints, or just to talk about photography.</p>
+      <a href="mailto:kintsukuroi814@gmail.com" class="contact-email">kintsukuroi814@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer-text">© 2026 kintsukuroi — All rights reserved</p>
+    <p class="footer-text footer-credit">Photography by Kint Sukuroi</p>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous photo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" id="lightbox-img" class="lightbox-img">
+      </div>
+      <button class="lightbox-next" id="lightbox-next" aria-label="Next photo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="lightbox-caption">
+        <span id="lightbox-title" class="lightbox-title-text"></span>
+        <span id="lightbox-counter" class="lightbox-counter-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY MODAL -->
+  <div id="201
+    " class="story-modal" role="dialog" aria-modal="true" aria-label="Memento Mori — Story">
+    <div class="story-modal__backdrop" onclick="document.getElementById('story-modal').classList.remove('is-open');document.body.style.overflow=''"></div>
+    <article class="story-modal__content">
+      <button class="story-modal__close" aria-label="Close story" onclick="document.getElementById('story-modal').classList.remove('is-open');document.body.style.overflow=''">&times;</button>
+      <header class="story-modal__header">
+        <h2 class="story-modal__title">Memento Mori</h2>
+        <p class="story-modal__subtitle">— a story</p>
+      </header>
+      <div class="story-modal__body">
+        <p>Bring me a cup of tea..</p>
+        <p>I am glad you exist.</p>
+        <p>&ldquo;You gave meaning to my life,&rdquo; he said, as he carefully wrapped both hands around the warm ceramic cup. His eyes were tired, yet lucid. Full of something I couldn&rsquo;t name.</p>
+        <p>I nodded slowly, the way you do when words feel too heavy to carry.</p>
+        <p>&ldquo;I was never afraid of dying,&rdquo; he continued. &ldquo;But I was terrified of leaving before I mattered.&rdquo;</p>
+        <p>Outside, the light was doing that thing it does in autumn &mdash; slanting gold through thin curtains, making everything look like memory before it even becomes one.</p>
+        <p>&ldquo;Do you think a person can feel when they&rsquo;ve done enough?&rdquo; he asked.</p>
+        <p>I thought about it. Really thought about it.</p>
+        <p>&ldquo;I think,&rdquo; I said, &ldquo;some people feel it in their chest. Like a settling. Like the last note of a song that didn&rsquo;t need a longer ending.&rdquo;</p>
+        <p>He smiled. Not the polite kind. The real kind. The kind that lives somewhere behind the eyes.</p>
+        <p>&ldquo;That&rsquo;s exactly it,&rdquo; he said. &ldquo;That&rsquo;s exactly what this feels like.&rdquo;</p>
+        <p>We sat for a while after that. The tea went cold. Neither of us moved to warm it.</p>
+        <p>There are moments that don&rsquo;t ask to be remembered &mdash; they simply stay.</p>
+        <p>I nodded, as if I understood him clearly, and looked back out the window.</p>
+        <p>He took another sip of the tea and a defiant smile emerged.</p>
+      </div>
+    </article>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>
